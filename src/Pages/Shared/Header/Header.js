@@ -4,10 +4,10 @@ import './Header.css'
 const Header = () => {
     return (
         <div>
-             <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top   ">
+             <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
       <div className="container">
         <a href="" className="navbar-brand ">
-          <span className="company-name text-orange">The White Hall</span>
+          <span >The White Hall</span>
           <br /> <span className="text-muted"></span>
         </a>
         <button
@@ -19,41 +19,41 @@ const Header = () => {
           <span className="navbar-toggler-icon "></span>
         </button>
         <div className="collapse navbar-collapse" id="menu">
-          <ul className="navbar-nav ml-auto ">
+          <ul className="navbar-nav ms-auto ">
             <li>
-            <Link to="/">HOME</Link>
+            <Link className="nav-link"  to="/">HOME</Link>
 
             </li>
             <li>
-            <Link to="/about">ABOUT</Link>
-
-            </li>
-
-            <li>
-            <Link to="/services">SERVICES</Link>
+            <Link className="nav-link" to="/about">ABOUT</Link>
 
             </li>
 
             <li>
-            <Link to="/packages">PACKAGES</Link>
+            <Link className="nav-link" to="/services">SERVICES</Link>
+
+            </li>
+
+            <li>
+            <Link className="nav-link" to="/packages">PACKAGES</Link>
 
             </li>
             <li>
-            <Link to="/booking">BOOKING</Link>
+            <Link className="nav-link" to="/booking">BOOKING</Link>
 
             </li>
             <li>
-            <Link to="/galary">GALARY</Link>
+            <Link  className="nav-link" to="/galary">GALARY</Link>
 
             </li>
           
 
             <li>
-            <Link to="/contact">CONTACT</Link>
+            <Link className="nav-link" to="/contact">CONTACT</Link>
 
             </li>
             <li>
-            <Link to="/login">LOGIN</Link>
+            <Link  className="nav-link" to="/login">LOGIN</Link>
             </li>
           </ul>
         </div>

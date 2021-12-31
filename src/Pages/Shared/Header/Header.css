@@ -1,3 +1,4 @@
-ul li link{
+.nav-link{
     text-decoration: none;
-}
+    justify-content: space-between;
+}  

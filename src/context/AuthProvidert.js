@@ -3,7 +3,7 @@ import React from 'react';
 const AuthProvidert = () => {
      return (
           <div>
-               <h1>Hello</h1>
+               <h1>Hello CCMS</h1>
           </div>
      );
 };

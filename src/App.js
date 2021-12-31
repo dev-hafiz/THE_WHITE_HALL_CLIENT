@@ -5,6 +5,7 @@ import Home from "./Pages/Home/Home";
 function App() {
   return (
   <div>
+  {/* Router SetUp  */}
     <BrowserRouter>
        <Routes>
        <Route path="/" element={<Home />} /> 

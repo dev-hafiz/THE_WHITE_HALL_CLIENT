@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Routes, Route, Link } from "react-router-dom";
+import './Header.css'
 const Header = () => {
     return (
         <div>
@@ -18,44 +19,41 @@ const Header = () => {
           <span className="navbar-toggler-icon "></span>
         </button>
         <div className="collapse navbar-collapse" id="menu">
-          <ul className="navbar-nav ml-auto">
+          <ul className="navbar-nav ml-auto ">
             <li>
-              <a href="#Home" className="nav-link">
-                HOME
-              </a>
+            <Link to="/">HOME</Link>
+
             </li>
             <li>
-              <a href="#About" className="nav-link">
-                ABOUT 
-              </a>
+            <Link to="/about">ABOUT</Link>
+
             </li>
 
             <li>
-              <a href="#Service" className="nav-link">
-              Service
-              </a>
+            <Link to="/service">SERVICE</Link>
+
             </li>
 
             <li>
-              <a href="#Projects" className="nav-link">
-                PROJECTS
-              </a>
+            <Link to="/package">PACKAGE</Link>
+
             </li>
             <li>
-              <a href="#Blogs" className="nav-link">
-                BLOGS
-              </a>
+            <Link to="/booking">BOOKING</Link>
+
             </li>
             <li>
-              <a href="#Education" className="nav-link">
-                EDUCATION
-              </a>
+            <Link to="/galary">GALARY</Link>
+
             </li>
+          
 
             <li>
-              <a href="#Contact" className="nav-link">
-                CONTACT
-              </a>
+            <Link to="/contact">CONTACT</Link>
+
+            </li>
+            <li>
+            <Link to="/login">LOGIN</Link>
             </li>
           </ul>
         </div>

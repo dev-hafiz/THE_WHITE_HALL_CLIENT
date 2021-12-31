@@ -6,7 +6,7 @@ const Header = () => {
              <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top   ">
       <div className="container">
         <a href="" className="navbar-brand ">
-          <span className="company-name text-orange">MEHEDI HASAN SAIKAT</span>
+          <span className="company-name text-orange">The White Hall</span>
           <br /> <span className="text-muted"></span>
         </a>
         <button
@@ -31,8 +31,8 @@ const Header = () => {
             </li>
 
             <li>
-              <a href="#Skills" className="nav-link">
-                SKILLS
+              <a href="#Service" className="nav-link">
+              Service
               </a>
             </li>
 

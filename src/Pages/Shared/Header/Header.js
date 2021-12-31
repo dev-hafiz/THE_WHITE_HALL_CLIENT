@@ -30,12 +30,12 @@ const Header = () => {
             </li>
 
             <li>
-            <Link to="/service">SERVICE</Link>
+            <Link to="/services">SERVICES</Link>
 
             </li>
 
             <li>
-            <Link to="/package">PACKAGE</Link>
+            <Link to="/packages">PACKAGES</Link>
 
             </li>
             <li>

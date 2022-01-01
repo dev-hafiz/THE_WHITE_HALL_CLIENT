@@ -8,7 +8,7 @@ import './AllOrders.css'
 
 const AllOrders = () => {
     const [orders, setOrders] = useState([])
-    // const { allContexts } = UseAuth()
+    const { user } = UseAuth()
 
     const [status, setStatus] = useState('')
     // const { user } = allContexts

@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import Rating from 'react-rating';
-
-
 import './CustomerReviews.css'
 
 
@@ -11,7 +9,7 @@ const CustomerReviews = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(` `)
+        fetch(`http://localhost:5000/review`)
             .then((res) => res.json())
             .then((data) => setReviews(data));
     }, []);

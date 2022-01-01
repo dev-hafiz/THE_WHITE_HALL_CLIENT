@@ -7,8 +7,7 @@ import useAuth from "../../../hooks/useAuth";
 const CustomerReview = () => {
     const { register, handleSubmit } = useForm();
 
-    const { allContexts } = useAuth()
-    const { user } = allContexts
+    const { user } = useAuth()
 
     const onSubmit = (data) => {
         fetch("http://localhost:5000/addSReview", {
@@ -27,7 +26,7 @@ const CustomerReview = () => {
                     <h1 style={{ fontSize: "60px" }}>Review</h1>
                 </div>
 
-                <div className='col-md-6 add-service d-flex justify-content-center w-100'>
+                <div className='col-md-6 add-package d-flex justify-content-center w-100'>
                     <form onSubmit={handleSubmit(onSubmit)}
                         className="contact1-form validate-form">
 

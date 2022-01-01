@@ -5,6 +5,7 @@ initializeAuthentication()
 
 const useFirebase = () =>{
 
+     //User state
      const [user, setUser] = useState({});
      const [isLoading, setIsLoading] = useState(true);
      const [authError, setAuthError] = useState('');

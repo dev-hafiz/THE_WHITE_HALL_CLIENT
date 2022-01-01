@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import loginPicture from '../../../src/Images/secuirePicture.png'
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Spinner } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 import { useLocation } from 'react-router-dom';
@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 const Login = () => {
 
 
-    const {googleUserSignIn, logOut, loginUser} = useFirebase()
+    const {googleUserSignIn, loginUser, isLoading} = useFirebase()
 
     const location = useLocation();
     const navigate = useNavigate();
@@ -50,7 +50,7 @@ const Login = () => {
                         </div>
 
                         <div>
-                        <Form onSubmit={handleLoginSubmit}>
+                        {!isLoading && <> <Form onSubmit={handleLoginSubmit}>
                             <Form.Group className="mb-5" controlId="formBasicEmail">
                                 
                                 <Form.Control 
@@ -85,6 +85,10 @@ const Login = () => {
                                 <Button onClick={handleGoogleSignIn} className="login-btn mt-4" variant="inherits" type="submit">
                                 Google Login
                                 </Button>
+                                </>
+                                }
+
+                                {isLoading && <Spinner animation="grow" />}
                         </div>
 
                     </div>

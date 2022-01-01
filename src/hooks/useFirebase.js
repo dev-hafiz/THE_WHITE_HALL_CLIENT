@@ -34,7 +34,7 @@ const useFirebase = () =>{
      }
 
 
-      //registerUser
+      //registerUser With Email And Pass
       const registerUser =(email, password, name, navigate) =>{
           setIsLoading(true)
           createUserWithEmailAndPassword(auth, email, password)
@@ -43,7 +43,6 @@ const useFirebase = () =>{
               setAuthError('')
               const newUser = {email, displayName:name}
               setUser(newUser)
-              
               
               //Send name to firebase 
               updateProfile(auth.currentUser, {

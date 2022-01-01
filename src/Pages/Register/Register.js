@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import './Register.css';
 import loginPicture from '../../../src/Images/secuirePicture.png'
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, Spinner } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 
 const Register = () => {
 
-          const {registerUser} = useFirebase()
+          const {registerUser, isLoading} = useFirebase()
           const [loginData, setLoginData] = useState({})
 
           const navigate = useNavigate()
@@ -45,7 +45,7 @@ const Register = () => {
                         </div>
 
                         <div>
-                        <Form onSubmit={handleRegisterSubmit}>
+                        {!isLoading && <> <Form onSubmit={handleRegisterSubmit}>
                             <Form.Group className="mb-2" controlId="formBasicEmail">
                                 
                                 <Form.Control
@@ -94,6 +94,11 @@ const Register = () => {
                             <NavLink style={{textDecoration:'none'}} to="/login">
                               <button className="route-btn" variant="text" style={{color:'#585C5F'}}>Already have an account? Please login</button>
                               </NavLink>  
+                              </>
+                         }
+
+                              {isLoading && <Spinner animation="grow" />}
+
                         </div>
 
                     </div>

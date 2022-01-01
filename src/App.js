@@ -7,6 +7,7 @@ import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
 import Packages from "./Pages/Packages/Packages";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
+import Register from "./Pages/Register/Register";
 import Services from "./Pages/Services/Services";
 import Header from "./Pages/Shared/Header/Header";
 
@@ -27,6 +28,7 @@ function App() {
        <Route path="/galary" element={<Galary />} /> 
        <Route path="/contact" element={<Contact />} /> 
        <Route path="/login" element={<Login />} /> 
+       <Route path="/register" element={<Register />} /> 
        <Route path="*" element={<PageNotFound />} /> 
   
        </Routes>

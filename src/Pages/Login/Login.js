@@ -1,10 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Login.css';
 import loginPicture from '../../../src/Images/secuirePicture.png'
 import { Button, Form } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
+import { useLocation } from 'react-router-dom';
 
 const Login = () => {
+
+
+    const {googleUserSignIn, logOut, loginUser} = useFirebase()
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const [loginData, setLoginData] = useState({})
+
+    const handleChange = e =>{
+        const filed = e.target.name;
+        const value = e.target.value;
+        const newLoginData = {...loginData}
+        newLoginData[filed] = value;
+        
+        setLoginData(newLoginData);
+   }
+
+    const handleLoginSubmit = e =>{
+
+        loginUser(loginData.email, loginData.password, location,navigate)
+        e.preventDefault();
+        
+   }
+
+    // Handler Google signIn
+    const handleGoogleSignIn = () =>{
+        googleUserSignIn(location, navigate)
+   }
+
     return (
         <div className="container mb-5">
             <div className="row mt-5 d-flex align-items-center">
@@ -18,11 +50,13 @@ const Login = () => {
                         </div>
 
                         <div>
-                        <Form>
+                        <Form onSubmit={handleLoginSubmit}>
                             <Form.Group className="mb-5" controlId="formBasicEmail">
                                 
                                 <Form.Control 
                                 type="email" 
+                                name="email"
+                                onChange={handleChange}
                                 placeholder="Enter Email *" 
                                 required />
                                
@@ -32,6 +66,8 @@ const Login = () => {
                                 
                                 <Form.Control 
                                 type="password" 
+                                name="password"
+                                onChange={handleChange}
                                 placeholder="Password *" 
                                 required />
                             </Form.Group>
@@ -46,7 +82,7 @@ const Login = () => {
                                 </NavLink>
                                 <br />
 
-                                <Button className="login-btn mt-4" variant="inherits" type="submit">
+                                <Button onClick={handleGoogleSignIn} className="login-btn mt-4" variant="inherits" type="submit">
                                 Google Login
                                 </Button>
                         </div>

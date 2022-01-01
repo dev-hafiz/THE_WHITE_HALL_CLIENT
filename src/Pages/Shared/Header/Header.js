@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import useAuth from '../../../hooks/useAuth';
 import './Header.css'
 const Header = () => {
-      const {user, logOut} = useAuth()
+      
+      const {  user, logOut, isAdmin  } = useAuth()
+      const { displayName} = user;
+  
+      const [isSticky, setSticky] = useState(false);
+      useEffect(() => {
+          window.addEventListener("scroll", () => {
+              if (window.scrollY > 50) {
+                  setSticky(true)
+              } else {
+                  setSticky(false)
+              }
+          })
+      }, []);
 
     return (
         <div>
@@ -49,6 +62,31 @@ const Header = () => {
             <Link className="nav-link" to="/contact">CONTACT</Link>
 
             </li>
+            
+
+            {
+                isAdmin ?
+
+                                    <>
+                                       
+                                       <li>
+            <Link className="nav-link" to="/admin">DASHBOARD</Link>
+
+            </li>
+
+                                    </> :
+
+                                  
+            <li>
+            <Link className="nav-link" to="/customerdashboard">DASHBOARD</Link>
+
+            </li>
+                            }
+           
+
+
+
+
             {!user.email ? <li>
             <Link  className="nav-link" to="/login">LOGIN</Link>
             </li>

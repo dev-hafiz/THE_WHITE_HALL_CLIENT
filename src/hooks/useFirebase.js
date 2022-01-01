@@ -125,6 +125,20 @@ const useFirebase = () =>{
 
      }
      
+     // get admin user 
+
+    const [isAdmin, setIsAdmin] = useState(false);
+    useEffect(() => {
+        fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data[0]?.role === "admin") {
+                    setIsAdmin(true);
+                } else {
+                    setIsAdmin(false);
+                }
+            });
+    }, [user?.email]);;
      
      
      return{

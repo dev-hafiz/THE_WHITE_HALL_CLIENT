@@ -2,12 +2,12 @@ import React from 'react';
 import './Package.css'
 import { Link } from "react-router-dom";
 const Package = ({singlepPackage }) => {
-    const { _id, name, price, Description, Img } = singlepPackage;
+    const { _id, name, price, Description, img } = singlepPackage;
     return (
         <div className="col mb-4 " id="packages">
       <div className="card h-100 ">
         <img
-          src={Img}
+          src={img}
           className="card-img-top p-3 rounded"
           alt="..."
           height="450"

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AddAdmin from '../AddAdmin/AddAdmin ';
+import AddGalary from '../AddGalary/AddGalary';
 import AddPackage from '../AddPackage/AddPackage';
 import AllOrders from '../AllOrders/AllOrders';
 import RemovePackage from '../RemovePackage/RemovePackage';
@@ -21,6 +22,9 @@ const Admin = () => {
 
 
                     <li className="nav-link py-3 border-bottom" onClick={() => setActive('add Package to DB')}> <i className="fa fa-first-order" ></i> <small>Add Package</small></li>
+
+                    <li className="nav-link py-3 border-bottom" onClick={() => setActive('add image to Galary')}> <i className="fa fa-first-order" ></i> <small>Add Galary</small></li>
+
                     <li className="nav-link py-3 border-bottom" onClick={() => setActive('Remove Package')}> <i className="fa fa-cog"></i> <small>Remove Package</small> </li>
 
                 </ul>
@@ -30,6 +34,7 @@ const Admin = () => {
                     (active === 'all orders' && <AllOrders></AllOrders>) ||
                     (active === 'add Package to DB' && <AddPackage></AddPackage>) ||
                     (active === 'make admin' && <AddAdmin></AddAdmin>) ||
+                    (active === 'add image to Galary' && <AddGalary></AddGalary>) ||
                     (active === 'Remove Package' && <RemovePackage></RemovePackage>)
                 }
             </div>

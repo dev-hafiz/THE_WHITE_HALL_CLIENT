@@ -4,8 +4,7 @@ import useAuth from '../../../hooks/useAuth';
 import './MyOrder.css'
 const MyOrders = () => {
     const [orders, setOrders] = useState([])
-    const { allContexts } = useAuth()
-    const { user } = allContexts
+    const { user } = useAuth()
     useEffect(() => {
         fetch(`http://localhost:5000/myOrder/${user?.email}`)
             .then((res) => res.json())

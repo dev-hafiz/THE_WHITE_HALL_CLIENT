@@ -6,10 +6,11 @@ initializeAuthentication()
 
 const useFirebase = () =>{
 
-     //User state
+     //All state is here
      const [user, setUser] = useState({});
      const [isLoading, setIsLoading] = useState(true);
      const [authError, setAuthError] = useState('');
+     
 
      // Auth and Provider
      const auth = getAuth();
@@ -124,7 +125,24 @@ const useFirebase = () =>{
           .then(data => console.log(data))
 
      }
+
+
      
+     
+     // get admin user 
+
+    const [isAdmin, setIsAdmin] = useState(false);
+    useEffect(() => {
+        fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+            .then((res) => res.json())
+            .then((data) => {
+                if (data[0]?.role === "admin") {
+                    setIsAdmin(true);
+                } else {
+                    setIsAdmin(false);
+                }
+            });
+    }, [user?.email]);;
      
      
      return{
@@ -134,7 +152,8 @@ const useFirebase = () =>{
           loginUser,
           googleUserSignIn,
           logOut,
-          registerUser
+          registerUser,
+          
 
      }
 }

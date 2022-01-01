@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import Loader from '../../Assets/img/loading.gif';
 
 const AllPackages = () => {
     const [packages, setPackages] = useState([]);
@@ -22,7 +21,7 @@ const AllPackages = () => {
             <div className="col mb-4 " id="packages" key={singlePackage._id}>
               <div className="card h-100 ">
                 <img
-                  src={singlePackage.Img}
+                  src={singlePackage.img}
                   className="card-img-top p-3 rounded"
                   alt="..."
                   height="450"
@@ -36,7 +35,7 @@ const AllPackages = () => {
                     <h4 className="text-primary mt-1 mb-5">
                       Price: {singlePackage.price}
                     </h4> 
-                    <Link to={`/booking/${singlePackage._id}`}>
+                    <Link to={`/placeOrder/${singlePackage._id}`}>
                       <button className="btn btn-danger mb-3">
                       <i className="fas fa-cart-plus"></i> Book Package 
                       </button>

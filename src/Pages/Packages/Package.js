@@ -15,7 +15,7 @@ const Package = ({singlepPackage }) => {
         />
         <div className="card-body">
           <h2 className="card-title text-danger">{name}</h2>
-          <p className="card-text text-justify ">{(Description).slice(0, 300)}</p>
+          <p className="card-text text-justify ">{Description}</p>
         </div>
         <div className="card-footer">
           <small className="text-muted">

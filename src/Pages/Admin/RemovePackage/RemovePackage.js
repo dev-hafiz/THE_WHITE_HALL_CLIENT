@@ -13,7 +13,7 @@ const RemovePackage = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure you want to DELETE this Package')
         if (proceed) {
-            const url = `/packages/${id}`
+            const url = `http://localhost:5000/packages/${id}`
             fetch(url, {
                 method: 'DELETE'
 

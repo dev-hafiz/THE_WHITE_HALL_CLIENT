@@ -1,11 +1,26 @@
-import React from 'react';
-import './Galary.css';
+import React, { useEffect, useState } from "react";
+import "./Galary.css";
 const Galary = () => {
-    return (
-        <div>
-           <h1>This is Galary page</h1> 
+  const [galaries, setGalaries] = useState();
+  useEffect(() => {
+    fetch(`http://localhost:5000/galary`)
+      .then((res) => res.json())
+      .then((data) => setGalaries(data));
+  });
+
+  return (
+    <div>
+      <div className="conatiner">
+        <div className="row">
+          {galaries?.map((galary) => (
+            <div className="col-md-3">
+              <img src={galary.img} alt="" className="w-100 m-4" height="300" />
+            </div>
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Galary;

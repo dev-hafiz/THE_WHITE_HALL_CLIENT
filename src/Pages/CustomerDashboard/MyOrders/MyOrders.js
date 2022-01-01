@@ -47,6 +47,7 @@ const MyOrders = () => {
                         <th >Price</th>
                         <th >Person</th>
                         <th >Amount</th>
+                        <th >Date</th>
                         <th >Status</th>
                         <th >Action</th>
                     </tr>
@@ -58,7 +59,8 @@ const MyOrders = () => {
                             <td><img style={{ width: "70px", height: "50px" }} src={order.img} alt="" /></td>
                             <td>{order.price}</td>
                             <td>{order.person}</td>
-                            <td>{order.amount}</td>
+                            <td>{order.totalCost}</td>
+                            <td>{order.date}</td>
                             <td>{order.status}</td>
                             <td> <button
                                 className="btn btn-danger"

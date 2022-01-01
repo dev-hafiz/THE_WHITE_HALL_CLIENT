@@ -55,6 +55,7 @@ const AllOrders = () => {
                         <th >Price</th>
                         <th >Person</th>
                         <th >Amount</th>
+                        <th >Date</th>
                         <th >User Email</th>
                         <th >User Address</th>
                         <th >Status</th>
@@ -69,7 +70,8 @@ const AllOrders = () => {
                             <td><img style={{ width: "70px", height: "50px" }} src={order.img} alt="" /></td>
                             <td>{order.price}</td>
                             <td>{order.person}</td>
-                            <td>{order.amount}</td>
+                            <td>{order.date}</td>
+                            <td>{order.totalCost}</td>
                             <td>{order.email}</td>
                             <td>{order.address}</td>
                             <td>

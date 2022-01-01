@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import Loader from '../../Assets/img/loading.gif';
 
 const AllPackages = () => {
     const [packages, setPackages] = useState([]);
@@ -22,7 +21,7 @@ const AllPackages = () => {
             <div className="col mb-4 " id="packages" key={singlePackage._id}>
               <div className="card h-100 ">
                 <img
-                  src={singlePackage.Img}
+                  src={singlePackage.img}
                   className="card-img-top p-3 rounded"
                   alt="..."
                   height="450"

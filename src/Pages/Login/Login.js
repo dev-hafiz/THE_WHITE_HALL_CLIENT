@@ -2,6 +2,7 @@ import React from 'react';
 import './Login.css';
 import loginPicture from '../../../src/Images/secuirePicture.png'
 import { Button, Form } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -18,21 +19,36 @@ const Login = () => {
 
                         <div>
                         <Form>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Group className="mb-5" controlId="formBasicEmail">
                                 
-                                <Form.Control type="email" placeholder="Enter email" required />
+                                <Form.Control 
+                                type="email" 
+                                placeholder="Enter Email *" 
+                                required />
                                
                             </Form.Group>
 
                             <Form.Group className="mb-3 mt-3" controlId="formBasicPassword">
                                 
-                                <Form.Control type="password" placeholder="Password" required />
+                                <Form.Control 
+                                type="password" 
+                                placeholder="Password *" 
+                                required />
                             </Form.Group>
                             
                             <Button className="login-btn mt-4" variant="inherits" type="submit">
                                 Login
                             </Button>
-                            </Form>  
+                            </Form> 
+
+                                <NavLink style={{textDecoration:'none'}} to="/register">
+                                <button className="route-btn"  variant="text" style={{color:'#585C5F'}}>Don't have an account? Please register</button>
+                                </NavLink>
+                                <br />
+
+                                <Button className="login-btn mt-4" variant="inherits" type="submit">
+                                Google Login
+                                </Button>
                         </div>
 
                     </div>

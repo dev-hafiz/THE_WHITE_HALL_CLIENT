@@ -19,25 +19,49 @@ const Register = () => {
 
                         <div>
                         <Form>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                            <Form.Group className="mb-2" controlId="formBasicEmail">
                                 
-                                <Form.Control type="email" placeholder="Enter email" required />
+                                <Form.Control
+                                name="name"
+                                type="text"
+                                placeholder="Your Full Name *"
+                                required />
                                
                             </Form.Group>
-
+                            <Form.Group className="mb-4" controlId="formBasicEmail">
+                                
+                                <Form.Control 
+                                type="email" 
+                                name="email"
+                                placeholder="Enter Email *" 
+                                required />
+                               
+                            </Form.Group>
+                            
                             <Form.Group className="mb-3 mt-3" controlId="formBasicPassword">
                                 
-                                <Form.Control type="password" placeholder="Password" required />
+                                <Form.Control
+                                 type="password"
+                                 name="password"
+                                 placeholder="Password *"
+                                 required />
+                            </Form.Group>
+                            <Form.Group className="mb-3 mt-3" controlId="formBasicPassword">
+                                
+                                <Form.Control 
+                                name="password2"
+                                type="password" 
+                                placeholder="Re-Type Password *" 
+                                required />
                             </Form.Group>
                             
                             <Button className="login-btn mt-4" variant="inherits" type="submit">
-                                Login
+                                Register
                             </Button>
                             </Form>
 
                             <NavLink style={{textDecoration:'none'}} to="/login">
-                              <button  variant="text" style={{color:'#585C5F', mt:2
-                              }}>Already have an account? Please login</button>
+                              <button className="route-btn" variant="text" style={{color:'#585C5F'}}>Already have an account? Please login</button>
                               </NavLink>  
                         </div>
 

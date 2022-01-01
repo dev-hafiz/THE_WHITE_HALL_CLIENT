@@ -19,31 +19,6 @@ import "react-calendar/dist/Calendar.css";
 
 function App() {
   return (
-<<<<<<< HEAD
-    <div>
-      {/* Router SetUp  */}
-      <AuthProvider>
-        <BrowserRouter>
-          <Header></Header>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/allpackages" element={<AllPackages />} />
-            <Route path="/booking" element={<Booking />} />
-            <Route path="/galary" element={<Galary />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/admin" element={<Admin />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/placeorder/:id" element={<PlaceOrder />} />
-            <Route path="/customerdashboard" element={<CustomerDashboard />} />
-            <Route path="*" element={<PageNotFound />} />
-          </Routes>
-          <Footer></Footer>
-        </BrowserRouter>
-      </AuthProvider>
-    </div>
-=======
   <div>
   {/* Router SetUp  */}
     <AuthProvider>
@@ -73,7 +48,6 @@ function App() {
                  </BrowserRouter>
     </AuthProvider>
   </div>
->>>>>>> 706439867188329c4a690667272cc18cdc9a9f08
   );
 }
 

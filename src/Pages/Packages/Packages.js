@@ -8,7 +8,7 @@ const Packages = () => {
 
     const [packages, setPackages] = useState([]);
     useEffect(() => {
-      fetch("  ")
+      fetch(" http://localhost:5000/packages")
         .then((res) => res.json())
         .then((data) => setPackages(data));
     }, []);

@@ -34,7 +34,7 @@ function App() {
                     <Route path="/contact" element={<Contact />} /> 
                     <Route path="/login" element={<Login />} /> 
                     <Route path="/admin" element={<Admin />} /> 
-                    <Route path="/admin" element={<Admin />} /> 
+                    <Route path="/register" element={<Register />} /> 
                     <Route path="/placeOrder/:id" element={<PlaceOrder />} /> 
                     <Route path="/customerdashboard" element={<CustomerDashboard />} /> 
                     <Route path="*" element={<PageNotFound />} /> 

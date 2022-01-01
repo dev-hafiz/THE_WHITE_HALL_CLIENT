@@ -1,5 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./Pages/About/About";
+import Admin from "./Pages/Admin/Admin/Admin";
+import AllPackages from "./Pages/AllPackages/AllPackages";
 import Booking from "./Pages/Booking/Booking";
 import Contact from "./Pages/Contact/Contact";
 import Galary from "./Pages/Galary/Galary";
@@ -8,7 +10,7 @@ import Login from "./Pages/Login/Login";
 import Packages from "./Pages/Packages/Packages";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import Register from "./Pages/Register/Register";
-import Services from "./Pages/Services/Services";
+import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 
 
@@ -22,16 +24,17 @@ function App() {
        <Routes>
        <Route path="/" element={<Home />} /> 
        <Route path="/about" element={<About />} /> 
-       <Route path="/services" element={<Services />} /> 
-       <Route path="/packages" element={<Packages />} /> 
+       <Route path="/allpackages" element={<AllPackages />} /> 
        <Route path="/booking" element={<Booking />} /> 
        <Route path="/galary" element={<Galary />} /> 
        <Route path="/contact" element={<Contact />} /> 
        <Route path="/login" element={<Login />} /> 
+       <Route path="/admin" element={<Admin />} /> 
        <Route path="/register" element={<Register />} /> 
        <Route path="*" element={<PageNotFound />} /> 
   
        </Routes>
+       <Footer></Footer>
       
     </BrowserRouter>
   </div>

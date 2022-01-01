@@ -36,7 +36,7 @@ const AllPackages = () => {
                     <h4 className="text-primary mt-1 mb-5">
                       Price: {singlePackage.price}
                     </h4> 
-                    <Link to={`/booking/${singlePackage._id}`}>
+                    <Link to={`/placeOrder/${singlePackage._id}`}>
                       <button className="btn btn-danger mb-3">
                       <i className="fas fa-cart-plus"></i> Book Package 
                       </button>

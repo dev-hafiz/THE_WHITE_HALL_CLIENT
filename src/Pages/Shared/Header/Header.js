@@ -38,10 +38,7 @@ const Header = () => {
             <Link className="nav-link" to="/allpackages">All PACKAGES</Link>
 
             </li>
-            <li>
-            <Link className="nav-link" to="/booking">BOOKING</Link>
-
-            </li>
+            
             <li>
             <Link  className="nav-link" to="/galary">GALARY</Link>
 

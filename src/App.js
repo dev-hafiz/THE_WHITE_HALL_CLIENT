@@ -19,6 +19,7 @@ import "react-calendar/dist/Calendar.css";
 
 function App() {
   return (
+<<<<<<< HEAD
     <div>
       {/* Router SetUp  */}
       <AuthProvider>
@@ -48,6 +49,37 @@ function App() {
         </BrowserRouter>
       </AuthProvider>
     </div>
+=======
+  <div>
+  {/* Router SetUp  */}
+    <AuthProvider>
+    <BrowserRouter>
+             
+             <Header></Header>
+                    <Routes>
+                    <Route path="/" element={<Home />} /> 
+                    <Route path="/about" element={<About />} /> 
+                    <Route path="/allpackages" element={<AllPackages />} /> 
+                    <Route path="/galary" element={<Galary />} /> 
+                    <Route path="/contact" element={<Contact />} /> 
+                    <Route path="/login" element={<Login />} /> 
+                    <Route path="/admin" element={<Admin />} /> 
+                    <Route path="/register" element={<Register />} /> 
+                    <Route path="/placeOrder/:id" element={
+                      <PrivateRoute>
+                        <PlaceOrder />
+                      </PrivateRoute>
+                    } /> 
+                    <Route path="/customerdashboard" element={<CustomerDashboard />} /> 
+                    <Route path="*" element={<PageNotFound />} /> 
+               
+                    </Routes>
+                    <Footer></Footer>
+                   
+                 </BrowserRouter>
+    </AuthProvider>
+  </div>
+>>>>>>> 08f9f6d7e073c13738315c95267904399b02966f
   );
 }
 

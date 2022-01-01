@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Package = ({singlepPackage }) => {
     const { _id, name, price, Description, Img } = singlepPackage;
     return (
-        <div className="col mb-4 " id="services">
+        <div className="col mb-4 " id="packages">
       <div className="card h-100 ">
         <img
           src={Img}

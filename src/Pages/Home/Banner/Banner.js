@@ -35,9 +35,12 @@ const Banner = () => {
               alt="Second slide"
             />
   
-            <Carousel.Caption> <Nav.Link as={HashLink} to="/allBikes">
-            <button className="btn btn-danger rounded pills"><h3>Bike Collection <i className="far fa-arrow-alt-circle-right"></i></h3></button>
-              </Nav.Link></Carousel.Caption>
+            <Carousel.Caption>
+            <Nav.Link as={HashLink} to="">
+            <button className="btn btn-danger rounded pills"><h3>Booking <i className="far fa-arrow-alt-circle-right"></i></h3></button>
+              </Nav.Link>
+             
+              </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
             <img
@@ -47,9 +50,12 @@ const Banner = () => {
               alt="Third slide"
             />
   
-            <Carousel.Caption> <Nav.Link as={HashLink} to="/allBikes">
-            <button className="btn btn-danger rounded pills"><h3>Bike Collection <i className="far fa-arrow-alt-circle-right"></i></h3></button>
-              </Nav.Link></Carousel.Caption>
+            <Carousel.Caption> 
+            <Nav.Link as={HashLink} to="">
+            <button className="btn btn-danger rounded pills"><h3>Booking <i className="far fa-arrow-alt-circle-right"></i></h3></button>
+              </Nav.Link>
+             
+              </Carousel.Caption>
           </Carousel.Item>
         </Carousel>
       </div>

@@ -11,6 +11,7 @@ import Login from "./Pages/Login/Login";
 import Packages from "./Pages/Packages/Packages";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
+import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
@@ -33,7 +34,11 @@ function App() {
                     <Route path="/login" element={<Login />} /> 
                     <Route path="/admin" element={<Admin />} /> 
                     <Route path="/register" element={<Register />} /> 
-                    <Route path="/placeOrder/:id" element={<PlaceOrder />} /> 
+                    <Route path="/placeOrder/:id" element={
+                      <PrivateRoute>
+                        <PlaceOrder />
+                      </PrivateRoute>
+                    } /> 
                     <Route path="/customerdashboard" element={<CustomerDashboard />} /> 
                     <Route path="*" element={<PageNotFound />} /> 
                

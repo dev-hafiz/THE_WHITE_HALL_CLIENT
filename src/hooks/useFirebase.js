@@ -6,10 +6,11 @@ initializeAuthentication()
 
 const useFirebase = () =>{
 
-     //User state
+     //All state is here
      const [user, setUser] = useState({});
      const [isLoading, setIsLoading] = useState(true);
      const [authError, setAuthError] = useState('');
+     
 
      // Auth and Provider
      const auth = getAuth();
@@ -124,6 +125,9 @@ const useFirebase = () =>{
           .then(data => console.log(data))
 
      }
+
+
+     
      
      // get admin user 
 
@@ -148,7 +152,8 @@ const useFirebase = () =>{
           loginUser,
           googleUserSignIn,
           logOut,
-          registerUser
+          registerUser,
+          
 
      }
 }

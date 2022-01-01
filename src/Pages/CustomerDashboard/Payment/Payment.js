@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Payment = () => {
-    return (
-        <div>
-            <h1>This is Payment</h1>
-        </div>
-    );
+  return (
+    <div>
+      <h1>payment system comming soon</h1>
+    </div>
+  );
 };
 
 export default Payment;

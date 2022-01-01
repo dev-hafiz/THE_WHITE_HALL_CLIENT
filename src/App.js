@@ -15,36 +15,33 @@ import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
 import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
-
+import "react-calendar/dist/Calendar.css";
 
 function App() {
   return (
-  <div>
-  {/* Router SetUp  */}
-    <AuthProvider>
-    <BrowserRouter>
-             
-             <Header></Header>
-                    <Routes>
-                    <Route path="/" element={<Home />} /> 
-                    <Route path="/about" element={<About />} /> 
-                    <Route path="/allpackages" element={<AllPackages />} /> 
-                    <Route path="/booking" element={<Booking />} /> 
-                    <Route path="/galary" element={<Galary />} /> 
-                    <Route path="/contact" element={<Contact />} /> 
-                    <Route path="/login" element={<Login />} /> 
-                    <Route path="/admin" element={<Admin />} /> 
-                    <Route path="/register" element={<Register />} /> 
-                    <Route path="/placeorder/:id" element={<PlaceOrder />} /> 
-                    <Route path="/customerdashboard" element={<CustomerDashboard />} /> 
-                    <Route path="*" element={<PageNotFound />} /> 
-               
-                    </Routes>
-                    <Footer></Footer>
-                   
-                 </BrowserRouter>
-    </AuthProvider>
-  </div>
+    <div>
+      {/* Router SetUp  */}
+      <AuthProvider>
+        <BrowserRouter>
+          <Header></Header>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/allpackages" element={<AllPackages />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/galary" element={<Galary />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/placeorder/:id" element={<PlaceOrder />} />
+            <Route path="/customerdashboard" element={<CustomerDashboard />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          <Footer></Footer>
+        </BrowserRouter>
+      </AuthProvider>
+    </div>
   );
 }
 

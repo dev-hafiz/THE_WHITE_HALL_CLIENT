@@ -3,11 +3,11 @@ import './Register.css';
 import loginPicture from '../../../src/Images/secuirePicture.png'
 import { Button, Form, Spinner } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
 
 const Register = () => {
 
-          const {registerUser, isLoading} = useFirebase()
+          const {registerUser, isLoading} = useAuth()
           const [loginData, setLoginData] = useState({})
 
           const navigate = useNavigate()

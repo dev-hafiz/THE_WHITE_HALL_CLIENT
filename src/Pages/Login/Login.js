@@ -3,13 +3,13 @@ import './Login.css';
 import loginPicture from '../../../src/Images/secuirePicture.png'
 import { Button, Form, Spinner } from 'react-bootstrap';
 import { NavLink, useNavigate } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
 import { useLocation } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
 
 
-    const {googleUserSignIn, loginUser, isLoading} = useFirebase()
+    const {googleUserSignIn, loginUser, isLoading} = useAuth()
 
     const location = useLocation();
     const navigate = useNavigate();

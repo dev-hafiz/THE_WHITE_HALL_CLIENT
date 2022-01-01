@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AuthProvider from "./AuthProvider/AuthProvider";
 import About from "./Pages/About/About";
 import Admin from "./Pages/Admin/Admin/Admin";
 import AllPackages from "./Pages/AllPackages/AllPackages";
@@ -18,25 +19,27 @@ function App() {
   return (
   <div>
   {/* Router SetUp  */}
+    <AuthProvider>
     <BrowserRouter>
              
-<Header></Header>
-       <Routes>
-       <Route path="/" element={<Home />} /> 
-       <Route path="/about" element={<About />} /> 
-       <Route path="/allpackages" element={<AllPackages />} /> 
-       <Route path="/booking" element={<Booking />} /> 
-       <Route path="/galary" element={<Galary />} /> 
-       <Route path="/contact" element={<Contact />} /> 
-       <Route path="/login" element={<Login />} /> 
-       <Route path="/admin" element={<Admin />} /> 
-       <Route path="/register" element={<Register />} /> 
-       <Route path="*" element={<PageNotFound />} /> 
-  
-       </Routes>
-       <Footer></Footer>
-      
-    </BrowserRouter>
+             <Header></Header>
+                    <Routes>
+                    <Route path="/" element={<Home />} /> 
+                    <Route path="/about" element={<About />} /> 
+                    <Route path="/allpackages" element={<AllPackages />} /> 
+                    <Route path="/booking" element={<Booking />} /> 
+                    <Route path="/galary" element={<Galary />} /> 
+                    <Route path="/contact" element={<Contact />} /> 
+                    <Route path="/login" element={<Login />} /> 
+                    <Route path="/admin" element={<Admin />} /> 
+                    <Route path="/register" element={<Register />} /> 
+                    <Route path="*" element={<PageNotFound />} /> 
+               
+                    </Routes>
+                    <Footer></Footer>
+                   
+                 </BrowserRouter>
+    </AuthProvider>
   </div>
   );
 }

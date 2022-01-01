@@ -8,11 +8,11 @@ const PlaceOrder = () => {
 
     const { register, handleSubmit, reset } = useForm();
     const { id } = useParams({});
-    const { allContexts } = useAuth()
-    const { user } = allContexts
+    const { user } = useAuth()
+    // const { user } = allContexts
     const [selected, setSelected] = useState({});
 
-
+console.log(user);
 
     useEffect(() => {
         fetch(`http://localhost:5000/packages/${id}`)
@@ -59,7 +59,9 @@ const PlaceOrder = () => {
             </div>
 
 
-            <div className='col-md-6 add-service d-flex justify-content-center'>
+
+
+            <div className='col-md-6 add-package d-flex justify-content-center'>
                 <form onSubmit={handleSubmit(onSubmit)} className="contact1-form validate-form">
 
                     <span className="contact1-form-title">
@@ -77,12 +79,24 @@ const PlaceOrder = () => {
                     <div className="wrap-input1 validate-input" data-validate="Message is required">
                         <input className="input1" type="text" defaultValue={selected.desc} placeholder="Name" {...register("desc", { required: true, })} />
                     </div>
+
+                  
+
+
                     <div className="wrap-input1 validate-input" data-validate="Message is required">
                         <input className="input1" type="text" defaultValue={selected.img} placeholder="Name" {...register("img", { required: true, })} />
                     </div>
                     <div className="wrap-input1 validate-input" data-validate="Name is required">
                         <input className="input1" type="text" placeholder="Please Provide your address" {...register("address", { required: true, })} />
                     </div>
+
+
+                    <div className="wrap-input1 validate-input" data-validate="Name is required">
+                        <input className="input1" type="text" placeholder="Total Guest" {...register("person", { required: true, })} />
+                    </div>
+
+                   
+
 
                     <div className="container-contact1-form-btn">
                         <button type='submit' className="contact1-form-btn">

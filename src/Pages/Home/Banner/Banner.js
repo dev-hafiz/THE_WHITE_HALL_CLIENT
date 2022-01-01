@@ -13,17 +13,15 @@ const Banner = () => {
             <img
               className="d-block w-100"
               src={banner1}
-              height="600"
+              height="400"
               alt="First slide"
             />
             <Carousel.Caption>
   
+
+  <h1 className="text-center"> DJ Party </h1>
   
   
-  
-            <Nav.Link as={HashLink} to="">
-            <button className="btn btn-danger rounded pills"><h3>Booking <i className="far fa-arrow-alt-circle-right"></i></h3></button>
-              </Nav.Link>
              
             </Carousel.Caption>
           </Carousel.Item>
@@ -31,14 +29,13 @@ const Banner = () => {
             <img
               className="d-block w-100"
               src={banner2}
-              height="600"
+              height="400"
               alt="Second slide"
             />
   
             <Carousel.Caption>
-            <Nav.Link as={HashLink} to="">
-            <button className="btn btn-danger rounded pills"><h3>Booking <i className="far fa-arrow-alt-circle-right"></i></h3></button>
-              </Nav.Link>
+            <h1 className="text-center"> Birthday Party </h1>
+
              
               </Carousel.Caption>
           </Carousel.Item>
@@ -51,9 +48,9 @@ const Banner = () => {
             />
   
             <Carousel.Caption> 
-            <Nav.Link as={HashLink} to="">
-            <button className="btn btn-danger rounded pills"><h3>Booking <i className="far fa-arrow-alt-circle-right"></i></h3></button>
-              </Nav.Link>
+        
+            <h1 className="text-center"> Wedding Party </h1>
+
              
               </Carousel.Caption>
           </Carousel.Item>

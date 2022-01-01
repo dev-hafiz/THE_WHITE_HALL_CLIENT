@@ -4,12 +4,14 @@ import Packages from '../Packages/Packages';
 
 
 import Banner from './Banner/Banner';
+import CustomerReviews from './CustomerReviews/CustomerReviews';
 const Home = () => {
     return (
 <div>
 <Banner></Banner>
 <About></About>
 <Packages></Packages>
+<CustomerReviews></CustomerReviews>
 
         </div>
     );

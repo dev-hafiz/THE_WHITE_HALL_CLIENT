@@ -9,6 +9,7 @@ import Login from "./Pages/Login/Login";
 import Packages from "./Pages/Packages/Packages";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import Register from "./Pages/Register/Register";
+import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 
 
@@ -31,6 +32,7 @@ function App() {
        <Route path="*" element={<PageNotFound />} /> 
   
        </Routes>
+       <Footer></Footer>
       
     </BrowserRouter>
   </div>

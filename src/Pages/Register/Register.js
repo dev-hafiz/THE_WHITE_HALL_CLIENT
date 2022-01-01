@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Register.css';
 import loginPicture from '../../../src/Images/secuirePicture.png'
 import { Button, Form } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 
 const Register = () => {
+
+          const {registerUser} = useFirebase()
+          const [loginData, setLoginData] = useState({})
+
+          const navigate = useNavigate()
+
+          const handleChange = e =>{
+               const filed = e.target.name;
+               const value = e.target.value;
+               const newLoginData = {...loginData}
+               newLoginData[filed] = value;
+               // console.log(newLoginData)
+               setLoginData(newLoginData);
+          }
+
+          const handleRegisterSubmit = (e) =>{
+
+               if(loginData.password !== loginData.password2){
+                    alert('Your password did not match');
+                    return
+               }
+
+               registerUser(loginData.email, loginData.password, loginData.name, navigate)
+               e.preventDefault();
+          }
+
      return (
           <div className="container mb-5">
             <div className="row mt-5 d-flex align-items-center">
@@ -18,26 +45,54 @@ const Register = () => {
                         </div>
 
                         <div>
-                        <Form>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form onSubmit={handleRegisterSubmit}>
+                            <Form.Group className="mb-2" controlId="formBasicEmail">
                                 
-                                <Form.Control type="email" placeholder="Enter email" required />
+                                <Form.Control
+                                name="name"
+                                type="text"
+                                onChange={handleChange}
+                                placeholder="Your Full Name *"
+                                required />
                                
                             </Form.Group>
-
+                            <Form.Group className="mb-3" controlId="formBasicEmail">
+                                
+                                <Form.Control 
+                                type="email" 
+                                name="email"
+                                onChange={handleChange}
+                                placeholder="Enter Email *" 
+                                required />
+                               
+                            </Form.Group>
+                            
                             <Form.Group className="mb-3 mt-3" controlId="formBasicPassword">
                                 
-                                <Form.Control type="password" placeholder="Password" required />
+                                <Form.Control
+                                 type="password"
+                                 name="password"
+                                 onChange={handleChange}
+                                 placeholder="Password *"
+                                 required />
+                            </Form.Group>
+                            <Form.Group className="mb-3 mt-3" controlId="formBasicPassword">
+                                
+                                <Form.Control 
+                                name="password2"
+                                type="password"
+                                onChange={handleChange} 
+                                placeholder="Re-Type Password *" 
+                                required />
                             </Form.Group>
                             
                             <Button className="login-btn mt-4" variant="inherits" type="submit">
-                                Login
+                                Register
                             </Button>
                             </Form>
 
                             <NavLink style={{textDecoration:'none'}} to="/login">
-                              <button  variant="text" style={{color:'#585C5F', mt:2
-                              }}>Already have an account? Please login</button>
+                              <button className="route-btn" variant="text" style={{color:'#585C5F'}}>Already have an account? Please login</button>
                               </NavLink>  
                         </div>
 

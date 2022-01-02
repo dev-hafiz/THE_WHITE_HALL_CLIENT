@@ -37,7 +37,15 @@ const CustomerReview = () => {
                         <div className="wrap-input1 validate-input" data-validate="Message is required">
                             <textarea className="input1 " placeholder="Description"{...register("review",)} />
                             <span className="shadow-input1"></span>
-                        </div><div className="wrap-input1 validate-input " data-validate="Name is required">
+                        </div>
+
+                        <div className="wrap-input1 validate-input" data-validate="Message is required">
+                            <input className="input1 " placeholder="Your Profile Picture URL"{...register("ratinguserprofile",)} />
+                            <span className="shadow-input1"></span>
+                        </div>
+
+
+                        <div className="wrap-input1 validate-input " data-validate="Name is required">
                             <input className="input1 " min="1" max="5" placeholder="rating" type="number" {...register("rating")} />
                         </div>
 

@@ -26,6 +26,8 @@ const CustomerReviews = () => {
                             <Carousel.Item key={review._id}>
                                 <div className="d-flex justify-content-center text-center review-slider">
                                     <div className="w-50">
+                                        <img src={review.ratinguserprofile} className="customerProfile"
+                                         width="150" height="150"  alt="" />
                                         <h3 className="color-white">{review?.name}</h3>
                                         <br />
                                         <p>  {review?.review}</p>

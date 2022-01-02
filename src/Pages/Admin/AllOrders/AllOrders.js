@@ -21,7 +21,7 @@ const AllOrders = () => {
 
 
     const handleUpdate = (id) => {
-        fetch(` http://localhost:5000/${id}`, {
+        fetch(` http://localhost:5000/statusUpdate/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ status }),

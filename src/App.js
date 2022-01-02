@@ -31,7 +31,11 @@ function App() {
             <Route path="/galary" element={<Galary />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/admin" element={<Admin />} />
+            <Route path="/admin" element={
+              <PrivateRoute>
+              <Admin />
+              </PrivateRoute>
+            } />
             <Route path="/register" element={<Register />} />
             <Route
               path="/placeOrder/:id"
@@ -41,7 +45,11 @@ function App() {
                 </PrivateRoute>
               }
             />
-            <Route path="/customerdashboard" element={<CustomerDashboard />} />
+            <Route path="/customerdashboard" element={
+              <PrivateRoute>
+              <CustomerDashboard />
+              </PrivateRoute>
+            } />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
           <Footer></Footer>

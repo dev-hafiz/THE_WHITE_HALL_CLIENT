@@ -8,7 +8,6 @@ import CustomerDashboard from "./Pages/CustomerDashboard/CustomerDashboard";
 import Galary from "./Pages/Galary/Galary";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/Login/Login";
-import Packages from "./Pages/Packages/Packages";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import PlaceOrder from "./Pages/PlaceOrder/PlaceOrder";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
@@ -16,6 +15,8 @@ import Register from "./Pages/Register/Register";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Header from "./Pages/Shared/Header/Header";
 import "react-calendar/dist/Calendar.css";
+import PlaceCenterBook from "./Pages/PlaceCenterBook/PlaceCenterBook";
+import BookCenter from "./Pages/BookCenter/BookCenter";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
             <Route path="/allpackages" element={<AllPackages />} />
             <Route path="/galary" element={<Galary />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/bookCenter" element={<BookCenter />} />
             <Route path="/login" element={<Login />} />
             <Route path="/admin" element={
               <PrivateRoute>
@@ -37,6 +39,8 @@ function App() {
               </PrivateRoute>
             } />
             <Route path="/register" element={<Register />} />
+
+
             <Route
               path="/placeOrder/:id"
               element={
@@ -45,6 +49,18 @@ function App() {
                 </PrivateRoute>
               }
             />
+
+
+<Route
+              path="/bookCenter/:id"
+              element={
+                <PrivateRoute>
+                  <PlaceCenterBook />
+                </PrivateRoute>
+              }
+            />
+
+
             <Route path="/customerdashboard" element={
               <PrivateRoute>
               <CustomerDashboard />

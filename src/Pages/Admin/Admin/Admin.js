@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import AddAdmin from '../AddAdmin/AddAdmin ';
+import AddBookCenterInfo from '../AddBookCenterInfo/AddBookCenterInfo';
 import AddGalary from '../AddGalary/AddGalary';
 import AddPackage from '../AddPackage/AddPackage';
 import AllOrders from '../AllOrders/AllOrders';
+import RemoveCenterPackage from '../RemoveCenterPackage/RemoveCenterPackage';
 import RemovePackage from '../RemovePackage/RemovePackage';
 import './Admin.css'
 const Admin = () => {
@@ -23,9 +25,13 @@ const Admin = () => {
 
                     <li className="nav-link py-3 border-bottom" onClick={() => setActive('add Package to DB')}> <i className="fa fa-first-order" ></i> <small>Add Package</small></li>
 
+                    <li className="nav-link py-3 border-bottom" onClick={() => setActive('add Book Center to DB')}> <i className="fa fa-first-order" ></i> <small>Add Book Center Info</small></li>
+
                     <li className="nav-link py-3 border-bottom" onClick={() => setActive('add image to Galary')}> <i className="fa fa-first-order" ></i> <small>Add Galary</small></li>
 
                     <li className="nav-link py-3 border-bottom" onClick={() => setActive('Remove Package')}> <i className="fa fa-cog"></i> <small>Remove Package</small> </li>
+
+                    <li className="nav-link py-3 border-bottom" onClick={() => setActive('Remove Center Package')}> <i className="fa fa-cog"></i> <small>Remove Center Package</small> </li>
 
                 </ul>
             </div>
@@ -33,9 +39,11 @@ const Admin = () => {
                 {
                     (active === 'all orders' && <AllOrders></AllOrders>) ||
                     (active === 'add Package to DB' && <AddPackage></AddPackage>) ||
+                    (active === 'add Book Center to DB' && <AddBookCenterInfo></AddBookCenterInfo>) ||
                     (active === 'make admin' && <AddAdmin></AddAdmin>) ||
                     (active === 'add image to Galary' && <AddGalary></AddGalary>) ||
-                    (active === 'Remove Package' && <RemovePackage></RemovePackage>)
+                    (active === 'Remove Package' && <RemovePackage></RemovePackage>)  ||
+                    (active === 'Remove Center Package' && <RemoveCenterPackage></RemoveCenterPackage>)
                 }
             </div>
         </div>        </div>

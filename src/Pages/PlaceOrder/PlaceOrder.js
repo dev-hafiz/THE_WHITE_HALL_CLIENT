@@ -128,6 +128,22 @@ const PlaceOrder = () => {
               />
             </div>
 
+
+
+            <div
+              className="wrap-input1 validate-input"
+              data-validate="Name is required"
+            >
+              <input
+                className="input1"
+                type="text"
+                placeholder="Event Type"
+                {...register("event", { required: true })}
+              />
+            </div>
+
+
+
             <div
               className="wrap-input1 validate-input"
               data-validate="Name is required"
@@ -139,6 +155,13 @@ const PlaceOrder = () => {
                 {...register("person", { required: true })}
               />
               <div>
+
+
+
+
+
+
+
                 <Button className="date" onClick={handleShow}>
                   Select date {value.toLocaleDateString()}
                 </Button>

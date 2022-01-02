@@ -58,6 +58,7 @@ const AllOrders = () => {
                         <th >Date</th>
                         <th >User Email</th>
                         <th >User Address</th>
+                        <th >Event Type</th>
                         <th >Status</th>
                         <th >Update</th>
                     </tr>
@@ -74,6 +75,7 @@ const AllOrders = () => {
                             <td>{order.totalCost}</td>
                             <td>{order.email}</td>
                             <td>{order.address}</td>
+                            <td>{order.event}</td>
                             <td>
                                 <div >
                                     <select onChange={handleSelectValue} className="pending p-2 ">

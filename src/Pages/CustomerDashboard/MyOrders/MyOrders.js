@@ -48,6 +48,7 @@ const MyOrders = () => {
                         <th >Person</th>
                         <th >Amount</th>
                         <th >Date</th>
+                        <th >Event Type</th>
                         <th >Status</th>
                         <th >Action</th>
                     </tr>
@@ -61,6 +62,7 @@ const MyOrders = () => {
                             <td>{order.person}</td>
                             <td>{order.totalCost}</td>
                             <td>{order.date}</td>
+                            <td>{order.event}</td>
                             <td>{order.status}</td>
                             <td> <button
                                 className="btn btn-danger"

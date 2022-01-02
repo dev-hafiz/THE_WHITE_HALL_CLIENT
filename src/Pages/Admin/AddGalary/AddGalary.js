@@ -32,6 +32,13 @@ Add Galary                    </span>
                         <span className="shadow-input1"></span>
                     </div>
 
+
+                    <div className="wrap-input1 validate-input" data-validate="url">
+                        <input type="text" />
+                        <input className="input1" placeholder="Image Name"  {...register("imgName",)} />
+                        <span className="shadow-input1"></span>
+                    </div>
+
                  
                     
 

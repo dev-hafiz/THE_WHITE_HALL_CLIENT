@@ -44,6 +44,26 @@ Add Food Package                    </span>
                         <span className="shadow-input1"></span>
                     </div>
 
+                    <div className="wrap-input1 validate-input" data-validate="url">
+                        <input type="text" />
+                        <input className="input1" placeholder="Item-1"  {...register("item1",)} />
+                        <span className="shadow-input1"></span>
+                    </div>
+
+                    <div className="wrap-input1 validate-input" data-validate="url">
+                        <input type="text" />
+                        <input className="input1" placeholder="Item-2"  {...register("item2",)} />
+                        <span className="shadow-input1"></span>
+                    </div>
+
+                    <div className="wrap-input1 validate-input" data-validate="url">
+                        <input type="text" />
+                        <input className="input1" placeholder="Item-3"  {...register("item3",)} />
+                        <span className="shadow-input1"></span>
+                    </div>
+
+
+
                     <div className="wrap-input1 validate-input" data-validate="Message is required">
                         <textarea className="input1" placeholder="Description"{...register("desc",)} />
                         <span className="shadow-input1"></span>

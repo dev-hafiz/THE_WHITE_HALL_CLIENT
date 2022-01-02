@@ -15,6 +15,7 @@ const Galary = () => {
           {galaries?.map((galary) => (
             <div className="col-md-3">
               <img src={galary.img} alt="" className="w-100 m-4" height="300" />
+              <h3 className="text-center">{galary.imgName}</h3>
             </div>
           ))}
         </div>

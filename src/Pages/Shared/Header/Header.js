@@ -19,7 +19,7 @@ const Header = () => {
       }, []);
 
     return (
-        <div>
+        
              <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
       <div className="container">
         <a href="" className="navbar-brand ">
@@ -28,7 +28,7 @@ const Header = () => {
         </a>
         <button
           type="button"
-          className="navbar-toggler "
+          className="navbar-toggler"
           data-target="#menu"
           data-toggle="collapse"
         >
@@ -76,7 +76,7 @@ const Header = () => {
 
                                     </> :
 
-                                  
+
             <li>
             <Link className="nav-link" to="/customerdashboard">DASHBOARD</Link>
 
@@ -98,7 +98,7 @@ const Header = () => {
         </div>
       </div>
     </nav>
-        </div>
+      
     );
 };
 

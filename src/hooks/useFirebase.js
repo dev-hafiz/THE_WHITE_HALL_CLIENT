@@ -136,7 +136,8 @@ const useFirebase = () =>{
         fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
             .then((res) => res.json())
             .then((data) => {
-                if (data[0]?.role === "admin") {
+                if (data[0]?.role === "admin")
+                 {
                     setIsAdmin(true);
                 } else {
                     setIsAdmin(false);

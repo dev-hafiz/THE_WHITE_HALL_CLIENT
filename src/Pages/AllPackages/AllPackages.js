@@ -27,10 +27,17 @@ const AllPackages = () => {
                   height="450"
                 />
                 <div className="card-body">
-                  <h2 className="card-title text-danger">{singlePackage.name}</h2>
+                  <h2 className="card-title text-danger text-center">{singlePackage.name}</h2>
                   <p className="card-text">{singlePackage.Description}</p>
+                  <h4>Item</h4>
+          <ol>
+            <li>Item-1{singlePackage.item1}</li>
+            <li>Item-2{singlePackage.item2}</li>
+            <li>Item-3{singlePackage.item3}</li>
+          </ol>
+
                 </div>
-                <div className="card-footer">
+                <div className="card-footer text-center">
                   <small className="text-muted">
                     <h4 className="text-primary mt-1 mb-5">
                       Price: {singlePackage.price}

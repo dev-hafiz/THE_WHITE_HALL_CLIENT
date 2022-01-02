@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import useAuth from '../../../hooks/useAuth';
-import './Header.css'
+import useAuth from "../../../hooks/useAuth";
+import "./Header.css";
 const Header = () => {
       
       const {  user, logOut, isAdmin  } = useAuth()

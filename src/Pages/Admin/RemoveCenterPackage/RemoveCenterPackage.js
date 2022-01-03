@@ -40,7 +40,7 @@ const RemoveCenterPackage = () => {
                     <div className="card h-100 hover custom-cart shadow-lg  mb-5 bg-body rounded">
                         <img src={singlebookCenter.img} className="img-fluid rounded-start w-100" alt="..." />
                         <div className="card-body">
-                            <h5 className="card-title">{singlebookCenter.name}</h5>
+                            <h3 className="card-title text-danger text-center">{singlebookCenter.name}</h3>
                             <p className="card-text">{singlebookCenter.desc}</p>
                         </div>
                         <div className=" text-center">

@@ -33,14 +33,15 @@ const RemovePackage = () => {
         <div>
             <div className="row">
             </div>
-            <div className="d-flex mt-5 justify-content-center "><h1>Packages</h1></div>
+            <div className="d-flex mt-5 justify-content-center ">
+                <h1 className="text-danger text-center">Packages</h1></div>
             <div className="container text-black mt-5 mb-5" >
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {packages.map(singlePackage => <div className="col" key={singlePackage.key} >
                         <div className="card h-100 hover custom-cart shadow-lg  mb-5 bg-body rounded">
                             <img src={singlePackage.img} className="img-fluid rounded-start w-100" alt="..." />
                             <div className="card-body p-5">
-                                <h5 className="card-title">{singlePackage.name}</h5>
+                                <h3 className="card-title text-danger text-center">{singlePackage.name}</h3>
                                 <p className="card-text">{singlePackage.desc}</p>
                             </div>
                             <div className="  text-center">

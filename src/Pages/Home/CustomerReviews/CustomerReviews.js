@@ -9,7 +9,7 @@ const CustomerReviews = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/review`)
+        fetch(`https://dry-shelf-83750.herokuapp.com/review`)
             .then((res) => res.json())
             .then((data) => setReviews(data));
     }, []);

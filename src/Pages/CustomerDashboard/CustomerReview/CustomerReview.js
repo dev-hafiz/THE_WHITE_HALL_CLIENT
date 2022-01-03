@@ -10,7 +10,7 @@ const CustomerReview = () => {
     const { user } = useAuth()
 
     const onSubmit = (data) => {
-        fetch("http://localhost:5000/addSReview", {
+        fetch("https://dry-shelf-83750.herokuapp.com/addSReview", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

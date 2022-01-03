@@ -5,7 +5,7 @@ const BookCenter = () => {
 
     const [bookCenter, setBookCenters] = useState([]);
     useEffect(() => {
-      fetch(`http://localhost:5000/bookCenter`)
+      fetch(`https://dry-shelf-83750.herokuapp.com/bookCenter`)
         .then((res) => res.json())
         .then((data) => setBookCenters(data));
     }, []);

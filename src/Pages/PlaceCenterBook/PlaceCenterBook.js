@@ -20,7 +20,7 @@ const PlaceCenterBook = () => {
     const handleShow = () => setShow(true);
   
     useEffect(() => {
-      fetch(`http://localhost:5000/bookCenter/${id}`)
+      fetch(`https://dry-shelf-83750.herokuapp.com/bookCenter/${id}`)
         .then((res) => res.json())
         .then((data) => {
           setSelected(data);
@@ -34,7 +34,7 @@ const PlaceCenterBook = () => {
       data.status = "Pending";
       data.date = value.toLocaleDateString();
   
-      fetch(`http://localhost:5000/addOrders`, {
+      fetch(`https://dry-shelf-83750.herokuapp.com/addOrders`, {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(data),

@@ -111,7 +111,7 @@ const useFirebase = () => {
   //SAVE USER TO DATABASE
   const saveUser = (email, displayName, method) => {
     const user = { email, displayName };
-    fetch("http://localhost:5000/addUserInfo", {
+    fetch("https://dry-shelf-83750.herokuapp.com/addUserInfo", {
       method: method,
       headers: {
         "content-type": "application/json",
@@ -126,7 +126,7 @@ const useFirebase = () => {
 
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
-    fetch(`http://localhost:5000/checkAdmin/${user?.email}`)
+    fetch(`https://dry-shelf-83750.herokuapp.com/checkAdmin/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data[0]?.role === "admin") {

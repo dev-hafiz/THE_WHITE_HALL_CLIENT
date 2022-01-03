@@ -5,7 +5,7 @@ const RemoveCenterPackage = () => {
 
     const [bookCenter, setBookCenters] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/bookCenter')
+        fetch('https://dry-shelf-83750.herokuapp.com/bookCenter')
             .then(res => res.json())
             .then(data => setBookCenters(data))
     }, [])
@@ -13,7 +13,7 @@ const RemoveCenterPackage = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure you want to DELETE this Package')
         if (proceed) {
-            const url = `http://localhost:5000/bookCenter/${id}`
+            const url = `https://dry-shelf-83750.herokuapp.com/bookCenter/${id}`
             fetch(url, {
                 method: 'DELETE'
 

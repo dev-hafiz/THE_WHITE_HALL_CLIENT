@@ -5,7 +5,7 @@ const RemovePackage = () => {
 
     const [packages, setPackages] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/packages')
+        fetch('https://dry-shelf-83750.herokuapp.com/packages')
             .then(res => res.json())
             .then(data => setPackages(data))
     }, [])
@@ -13,7 +13,7 @@ const RemovePackage = () => {
     const handelDelete = id => {
         const proceed = window.confirm('Are you sure you want to DELETE this Package')
         if (proceed) {
-            const url = `http://localhost:5000/packages/${id}`
+            const url = `https://dry-shelf-83750.herokuapp.com/packages/${id}`
             fetch(url, {
                 method: 'DELETE'
 

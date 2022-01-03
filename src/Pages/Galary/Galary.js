@@ -3,7 +3,7 @@ import "./Galary.css";
 const Galary = () => {
   const [galaries, setGalaries] = useState();
   useEffect(() => {
-    fetch(`http://localhost:5000/galary`)
+    fetch(`https://dry-shelf-83750.herokuapp.com/galary`)
       .then((res) => res.json())
       .then((data) => setGalaries(data));
   });

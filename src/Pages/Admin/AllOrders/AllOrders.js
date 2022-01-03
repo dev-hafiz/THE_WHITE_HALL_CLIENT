@@ -13,7 +13,7 @@ const AllOrders = () => {
     const [status, setStatus] = useState('')
     // const { user } = allContexts
     useEffect(() => {
-        fetch(`http://localhost:5000/allOrders`)
+        fetch(`https://dry-shelf-83750.herokuapp.com/allOrders`)
             .then((res) => res.json())
             .then((data) => setOrders(data));
     }, );
@@ -21,7 +21,7 @@ const AllOrders = () => {
 
 
     const handleUpdate = (id) => {
-        fetch(` http://localhost:5000/statusUpdate/${id}`, {
+        fetch(` https://dry-shelf-83750.herokuapp.com/statusUpdate/${id}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ status }),

@@ -16,8 +16,8 @@ const Packages = () => {
     return (
         <div id="packages ">
         <h2 className=" my-5 packages-header p-3 m-3 mx-auto text-center">
-       Most Desire Packages      </h2>
-  {MostDesirePackages.length===0 ? <span>   <div className=" justify-content-center w-100 d-flex">
+       Most Desire Food Packages      </h2>
+  {MostDesirePackages.length===0 ? <span>   <div className=" justify-content-center w-100 d-flex ">
                                   <img src={Loader} alt="" width="300" height="300"/>
                               </div></span>:(<div className="row row-cols-1 row-cols-md-3 m-2  ">
           {MostDesirePackages.map((singlepPackage) => (

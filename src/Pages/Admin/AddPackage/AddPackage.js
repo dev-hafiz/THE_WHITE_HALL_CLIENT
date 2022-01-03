@@ -1,6 +1,7 @@
 import React from 'react';
 import './AddPackage.css'
 import axios from 'axios';
+import foodPackage from '../../../Assets/img/FoodPackage.png';
 import { useForm } from "react-hook-form";
 
 
@@ -20,8 +21,8 @@ const AddPackage = () => {
         <div className="add-package">
         <div className="contact1">
             <div className="container-contact1">
-                <div className="contact1-pic js-tilt" data-tilt="">
-                    <img src="" alt="IMG" />
+                <div  data-tilt="">
+                    <img src={foodPackage} alt="IMG" height="400" />
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} className="contact1-form validate-form">
 

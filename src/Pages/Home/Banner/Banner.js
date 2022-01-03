@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from "react-bootstrap";
 import {  Nav,  } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
-import banner1 from '../../../Assets/img/Banner/banner1.jpg';
+import banner1 from '../../../Assets/img/Banner/Capture.PNG';
 import banner2 from '../../../Assets/img/Banner/banner2.jpg';
 import banner3 from '../../../Assets/img/Banner/banner3.jpg';
 const Banner = () => {
@@ -19,7 +19,6 @@ const Banner = () => {
             <Carousel.Caption>
   
 
-  <h1 className="text-center"> DJ Party </h1>
   
   
              

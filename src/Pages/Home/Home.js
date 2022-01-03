@@ -5,13 +5,16 @@ import Packages from '../Packages/Packages';
 
 import Banner from './Banner/Banner';
 import CustomerReviews from './CustomerReviews/CustomerReviews';
+import Decoration from './Decoration/Decoration';
+import Location from './Location/Location';
 const Home = () => {
     return (
 <div>
 <Banner></Banner>
-<About></About>
 <Packages></Packages>
+<Decoration></Decoration>
 <CustomerReviews></CustomerReviews>
+<Location></Location>
 
         </div>
     );

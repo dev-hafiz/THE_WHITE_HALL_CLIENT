@@ -20,7 +20,7 @@ const CustomerReview = () => {
         alert('review added')
     };
     return (
-        <div className="container custom-body mt-5 d-flex justify-content-center">
+        <div className="container custom-body mt-5 d-flex justify-content-center ">
             <div>
                 <div className="text-center pt-5 pb-3 ">
                     <h1 style={{ fontSize: "60px" }}>Review</h1>

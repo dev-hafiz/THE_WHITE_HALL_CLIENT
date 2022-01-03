@@ -13,37 +13,37 @@ const AllPackages = () => {
     return (
       <div id="packages ">
       <h2 className=" my-5 packages-header p-3 m-3 mx-auto text-center">
-        All Packages in Our Center 
+        All Food Packages in Our Center 
       </h2>
     
         <div className="row row-cols-1 row-cols-md-3 m-2  ">
           {packages.map((singlePackage) => (
             <div className="col mb-4 " id="packages" key={singlePackage._id}>
-              <div className="card h-100 ">
+              <div className="card h-100 shadow-lg mb-5 bg-body rounded">
                 <img
                   src={singlePackage.img}
                   className="card-img-top p-3 rounded"
                   alt="..."
                   height="450"
                 />
-                <div className="card-body">
+                <div className="card-body p-3">
                   <h2 className="card-title text-danger text-center">{singlePackage.name}</h2>
                   <p className="card-text">{singlePackage.Description}</p>
-                  <h4>Item</h4>
+                  <h3 className="text-primary mb-3 mt-4">Item</h3>
           <ol>
-            <li>Item-1{singlePackage.item1}</li>
-            <li>Item-2{singlePackage.item2}</li>
-            <li>Item-3{singlePackage.item3}</li>
+            <li>{singlePackage.item1}</li>
+            <li>{singlePackage.item2}</li>
+            <li>{singlePackage.item3}</li>
           </ol>
 
                 </div>
-                <div className="card-footer text-center">
+                <div className=" text-center">
                   <small className="text-muted">
-                    <h4 className="text-primary mt-1 mb-5">
+                    <h2 className="text-primary mt-1 mb-5">
                       Price: {singlePackage.price}
-                    </h4> 
+                    </h2> 
                     <Link to={`/placeOrder/${singlePackage._id}`}>
-                      <button className="btn btn-danger mb-3">
+                      <button className="btn btn-danger mb-5 ">
                       <i className="fas fa-cart-plus"></i> Book Package 
                       </button>
                     </Link>

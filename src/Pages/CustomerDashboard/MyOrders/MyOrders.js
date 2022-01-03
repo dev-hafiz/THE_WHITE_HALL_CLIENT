@@ -39,7 +39,7 @@ const MyOrders = () => {
                 <h1 className="mb-5 text-center pt-5">Your Ordered <span className="text-danger">{orders.length}</span> </h1>
             </div>
 
-            <table className="table table-dark text-center" style={{ width: "100%" }}>
+            <table className="table table-dark text-center table-responsive" style={{ width: "100%" }}>
                 <thead  >
                     <tr className="bg-dark text-white mb-3 p-2" style={{ border: "1px solid red" }}>
                         <th  >Product</th>

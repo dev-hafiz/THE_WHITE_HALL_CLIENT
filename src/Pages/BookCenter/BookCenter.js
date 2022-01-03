@@ -21,7 +21,7 @@ const BookCenter = () => {
                 <div className="card h-100 shadow-lg  mb-5 bg-body rounded">
                   <img
                     src={singlebookCenter.img}
-                    className="card-img-top p-3 rounded"
+                    className="card-img-top rounded"
                     alt="..."
                     height="450"
                   />

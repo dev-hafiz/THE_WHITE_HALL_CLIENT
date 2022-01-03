@@ -6,6 +6,7 @@ import Packages from '../Packages/Packages';
 import Banner from './Banner/Banner';
 import CustomerReviews from './CustomerReviews/CustomerReviews';
 import Decoration from './Decoration/Decoration';
+import FAQ from './FAQ/FAQ';
 import Location from './Location/Location';
 const Home = () => {
     return (
@@ -13,6 +14,7 @@ const Home = () => {
 <Banner></Banner>
 <Packages></Packages>
 <Decoration></Decoration>
+<FAQ></FAQ>
 <CustomerReviews></CustomerReviews>
 <Location></Location>
 

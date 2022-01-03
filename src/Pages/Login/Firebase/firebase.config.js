@@ -1,10 +1,10 @@
 const firebaseConfig = {
-     apiKey: "AIzaSyAq8znu8FZddk1XLUPE3Qej7R_ZA3jA23Q",
-     authDomain: "management-system-bec22.firebaseapp.com",
-     projectId: "management-system-bec22",
-     storageBucket: "management-system-bec22.appspot.com",
-     messagingSenderId: "671405104509",
-     appId: "1:671405104509:web:e534648d717d1614d74014"
+  apiKey: "AIzaSyAtaRxAPZxXOuxAA-DKRpTQsgRidtj-X2g",
+  authDomain: "the-white-hall.firebaseapp.com",
+  projectId: "the-white-hall",
+  storageBucket: "the-white-hall.appspot.com",
+  messagingSenderId: "129305545369",
+  appId: "1:129305545369:web:f1996b6eaf62466d3c4608"
    };
 
 export default firebaseConfig;

@@ -90,7 +90,6 @@ Property Rights
           </div>
         </div>
       </div>
-
         </div>
     );
 };

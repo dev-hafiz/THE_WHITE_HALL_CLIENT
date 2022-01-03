@@ -20,16 +20,20 @@ const FAQ = () => {
               <h2 className="accordion-header" id="headingOne">
                 <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                   aria-expanded="true" aria-controls="collapseOne">
-                  What are the most important things I should
-                  know about riding a bike?
+                Order Cancellation Fees
+
                 </button>
               </h2>
               <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  <p> Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and laws. Get in
-                    the mindset of “driving” your bike—not just “riding” your bike. This will help you be a more focused
-                    and legally compliant bike rider. </p>
+                  <p> If you decide to cancel the program then 100% of the advanced payment
+
+If 7 days before the program then 50% of the total payment
+
+If 3 days before the program then 100% of the total payment
+
+Please note different community center may have different booking/order cancellation fees you should be aware of that. Contact with them. Thank You. </p>
                 </div>
               </div>
             </div>
@@ -37,17 +41,14 @@ const FAQ = () => {
               <h2 className="accordion-header" id="headingTwo">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  How can I tell if my helmet is old and I need a
-                  new one?
+              Payment
+
                 </button>
               </h2>
               <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample">
                 <div className="accordion-body">
-                  <p>Bear in mind that if the helmet did its job most people would tell you that they did not even hit
-                    their head, or did not hit their head that hard. And the thin shells on most helmets now tend to
-                    hide any dents in the foam. But if you can see marks on the shell or measure any foam crush at all,
-                    replace the helmet.</p>
+                  <p>If you take any service from us like food, decor or even book any community center via us then you will be asked to pay 50% (But few place may ask for full payment) for the booking or order any service money from the full payment (Full payment shall be paid before 3 days of your respective program </p>
                 </div>
               </div>
             </div>
@@ -55,16 +56,16 @@ const FAQ = () => {
               <h2 className="accordion-header" id="headingThree">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  My bike has been in storage is it safe to ride?
+Property Rights
                 </button>
               </h2>
               <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div className="accordion-body">
                   <p>
-                    The bottom line: Leaving your bike outside for a day or two won't do major damage. You may see signs
-                    of rust after a week of neglect. After one month in bad conditions, your beloved bike parts will
-                    start to degrade.</p>
+                  You are granted limited license only for purposes of viewing & editing the material contained on this Website if you are the owner of this property (fees may apply).
+
+</p>
                 </div>
               </div>
             </div>
@@ -72,21 +73,16 @@ const FAQ = () => {
               <h2 className="accordion-header" id="headingThree">
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  What rules should I follow when riding my bike?
+             Media
                 </button>
               </h2>
               <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div className="accordion-body">
                   <p>
-                    When riding, always:
-                    Go With the Traffic Flow. Ride on the right in the same direction as other vehicles. ...
-                    Obey All Traffic Laws. A bicycle is a vehicle and you're a driver. ...
-                    Yield to Traffic When Appropriate. ...
-                    Be Predictable. ...
-                    Stay Alert at All Times. ...
-                    Look Before Turning. ...
-                    Watch for Parked Cars.</p>
+                  If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.
+
+</p>
                   </div>
                 </div>
               </div>

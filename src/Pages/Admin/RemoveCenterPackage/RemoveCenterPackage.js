@@ -37,14 +37,14 @@ const RemoveCenterPackage = () => {
         <div className="container text-black mt-5 mb-5" >
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {bookCenter.map(singlebookCenter => <div className="col" key={singlebookCenter.key} >
-                    <div className="card h-100 hover custom-cart">
+                    <div className="card h-100 hover custom-cart shadow-lg  mb-5 bg-body rounded">
                         <img src={singlebookCenter.img} className="img-fluid rounded-start w-100" alt="..." />
                         <div className="card-body">
                             <h5 className="card-title">{singlebookCenter.name}</h5>
                             <p className="card-text">{singlebookCenter.desc}</p>
                         </div>
-                        <div className="card-footer  text-center">
-                            <button className="btn btn-danger" onClick={() => handelDelete(singlebookCenter._id)}>Remove</button>
+                        <div className=" text-center">
+                            <button className="btn btn-danger mb-4" onClick={() => handelDelete(singlebookCenter._id)}>Delete Center Package</button>
                         </div>
                     </div>
                 </div>)

@@ -37,14 +37,14 @@ const RemovePackage = () => {
             <div className="container text-black mt-5 mb-5" >
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {packages.map(singlePackage => <div className="col" key={singlePackage.key} >
-                        <div className="card h-100 hover custom-cart">
+                        <div className="card h-100 hover custom-cart shadow-lg  mb-5 bg-body rounded">
                             <img src={singlePackage.img} className="img-fluid rounded-start w-100" alt="..." />
-                            <div className="card-body">
+                            <div className="card-body p-5">
                                 <h5 className="card-title">{singlePackage.name}</h5>
                                 <p className="card-text">{singlePackage.desc}</p>
                             </div>
-                            <div className="card-footer  text-center">
-                                <button className="btn btn-danger" onClick={() => handelDelete(singlePackage._id)}>Remove</button>
+                            <div className="  text-center">
+                                <button className="btn btn-danger mx-2 mb-4" onClick={() => handelDelete(singlePackage._id)}>Delete Food Package</button>
                             </div>
                         </div>
                     </div>)

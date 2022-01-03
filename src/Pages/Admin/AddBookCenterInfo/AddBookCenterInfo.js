@@ -19,11 +19,9 @@ const AddBookCenterInfo = () => {
     return (
         <div className="add-package">
         <div className="contact1">
-            <div className="container-contact1">
-                <div className="contact1-pic js-tilt" data-tilt="">
-                    <img src="" alt="IMG" />
-                </div>
-                <form onSubmit={handleSubmit(onSubmit)} className="contact1-form validate-form">
+            <div className="container-contact1 mx-auto justify-content-center">
+               
+                <form onSubmit={handleSubmit(onSubmit)} className="contact1-form validate-form mx-auto justify-content-center">
 
                     <span className="contact1-form-title">
 Add Center Info                  </span>

@@ -20,7 +20,7 @@ const AddGalary = () => {
         <div className="contact1">
             <div className="container-contact1">
                
-                <form onSubmit={handleSubmit(onSubmit)} className="contact1-form validate-form">
+                <form onSubmit={handleSubmit(onSubmit)} className="contact1-form validate-form mx-auto justify-content-center">
 
                     <span className="contact1-form-title">
 Add Galary                    </span>

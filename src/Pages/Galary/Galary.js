@@ -13,10 +13,14 @@ const Galary = () => {
       <div className="conatiner">
         <div className="row">
           {galaries?.map((galary) => (
-            <div className="col-md-3">
-              <img src={galary.img} alt="" className="w-100 m-4" height="300" />
-              <h3 className="text-center">{galary.imgName}</h3>
-            </div>
+        <div className="col-md-3">
+            <div className="card card-body">
+             
+             <img src={galary.img} alt="" className="w-100 img-fluid" height="300" />
+             <h3 className="text-center">{galary.imgName}</h3>
+           
+         </div>
+        </div>
           ))}
         </div>
       </div>

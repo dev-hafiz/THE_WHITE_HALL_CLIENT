@@ -97,14 +97,7 @@ const Login = () => {
                     </button>
                   </NavLink>
                   <br />
-                  <Button
-                    onClick={handleGoogleSignIn}
-                    className="login-btn mt-4"
-                    variant="inherits"
-                    type="submit"
-                  >
-                    Google Login
-                  </Button>
+                 
                 </>
               )}
 

@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import useAuth from "../../../hooks/useAuth";
+import { Container, Nav, Navbar, } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
+
+
 import "./Header.css";
 const Header = () => {
   const { user, logOut, isAdmin } = useAuth();
@@ -18,99 +22,69 @@ const Header = () => {
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top ">
-      <div className="container">
-        <a href="" className="navbar-brand ">
-          <span>The White Hall</span>
-          <br /> <span className="text-muted"></span>
-        </a>
-        <button
-          type="button"
-          className="navbar-toggler"
-          data-target="#navbar"
-          data-toggle="collapse"
-        >
-          <span className="navbar-toggler-icon "></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbar">
-          <ul className="navbar-nav ms-auto ">
-            <li>
-              <Link className="nav-link" to="/">
-                HOME
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/about">
-                ABOUT
-              </Link>
-            </li>
 
-            <li>
-              <Link className="nav-link" to="/allpackages">
-                All PACKAGES
-              </Link>
-            </li>
-            <li>
-              <Link className="nav-link" to="/bookCenter">
-CENTER BOOK</Link>
-            </li>
+<div>
+<Navbar bg="light" expand="lg" className={(isSticky) ? "navbar  navbar-expand-lg navbar-dark bg-dark fixed-top" : "navbar  navbar-expand-lg navbar-light color text-dark"}>
+    <Container>
+        <Nav.Link as={NavLink} to="/home"><Navbar.Brand href="#home"> THE WHITE HALL </Navbar.Brand></Nav.Link>
 
-            <li>
-              <Link className="nav-link" to="/galary">
-                GALARY
-              </Link>
-            </li>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto align-items-center">
+                <Nav.Link as={NavLink} to="/">HOME</Nav.Link>
 
-            <li>
-              <Link className="nav-link" to="/contact">
-                CONTACT
-              </Link>
-            </li>
+
+                <Nav.Link as={NavLink} to="/about">ABOUT</Nav.Link>
+                <Nav.Link as={NavLink} to="/allpackages">PACKAGES</Nav.Link>
+
+                <Nav.Link as={NavLink} to="/galary">GALARY</Nav.Link>
+
+                <Nav.Link as={NavLink} to="/bookCenter">BOOK CENTER</Nav.Link>
+                <Nav.Link as={NavLink} to="/contact">CONTACT</Nav.Link>
 
 
 
+                {
+                    isAdmin ?
 
-            {isAdmin ? (
-              <li>
-                <Link className="nav-link" to="/admin">
-                  DASHBOARD
-                </Link>
-              </li>
-            ) : (
-              <li>
-                <Link className="nav-link" to="/customerdashboard">
-                  DASHBOARD
-                </Link>
-              </li>
-            )}
+                        <>
+                            <Nav.Link as={NavLink} to="/customerDashboard">CUSTOMER DASHBOARD</Nav.Link>
+                            <Nav.Link as={NavLink} to="/admin">ADMIN Dashboard</Nav.Link>
+                        </> :
 
-            {!user.email ? (
-              <li>
-                <Link className="nav-link" to="/login">
-                  LOGIN
-                </Link>
-              </li>
-            ) : (
-              <li>
-                <button
-                  onClick={logOut}
-                  className="nav-link btn btn-outline-dark"
-                >
-                  LOG-OUT
-                </button>
-              </li>
-            )}
-
-<li>
-            <h5 className="ms-1 mt-2 text-warning">{displayName}</h5>
-            </li>
+                        <Nav.Link as={NavLink} to="/customerDashboard">CUSTOMER DASHBOARD</Nav.Link>
+                }
 
 
-          </ul>
+                {!displayName ? (<><Nav.Link as={NavLink} to="/register">SIGN UP</Nav.Link>
 
-        </div>
-      </div>
-    </nav>
+                    <Nav.Link as={NavLink} to="/login">LOG IN</Nav.Link></>) : (
+                    <>
+                        {isAdmin ?
+                            <Nav.Link className='text-danger' ><h4>{displayName} <i className="fas fa-users-cog"></i></h4></Nav.Link>
+                            :
+                            <Nav.Link className='text-danger' ><h4>{displayName}</h4></Nav.Link>
+                        }
+
+
+                        <button className='btn-danger p-2 text-light   rounded-pill btn-block' onClick={logOut}> log out</button></>
+                )}
+
+            </Nav>
+        </Navbar.Collapse>
+    </Container>
+</Navbar>
+</div >
+
+
+
+
+
+
+
+
+
+
   );
 };
 

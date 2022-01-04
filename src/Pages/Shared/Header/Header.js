@@ -26,7 +26,7 @@ const Header = () => {
 <div>
 <Navbar bg="light" expand="lg" className={(isSticky) ? "navbar  navbar-expand-lg navbar-dark bg-dark fixed-top" : "navbar  navbar-expand-lg navbar-light color text-dark"}>
     <Container>
-        <Nav.Link as={NavLink} to="/home"><Navbar.Brand href="#home"> THE WHITE HALL </Navbar.Brand></Nav.Link>
+        <Nav.Link as={NavLink} to="/"><Navbar.Brand href="#home"> THE WHITE HALL </Navbar.Brand></Nav.Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -48,17 +48,17 @@ const Header = () => {
                     isAdmin ?
 
                         <>
-                            <Nav.Link as={NavLink} to="/customerDashboard">CUSTOMER DASHBOARD</Nav.Link>
-                            <Nav.Link as={NavLink} to="/admin">ADMIN Dashboard</Nav.Link>
+                          
+                            <Nav.Link as={NavLink} to="/admin"> DASHBOARD</Nav.Link>
                         </> :
 
-                        <Nav.Link as={NavLink} to="/customerDashboard">CUSTOMER DASHBOARD</Nav.Link>
+                        <Nav.Link as={NavLink} to="/customerDashboard"> DASHBOARD</Nav.Link>
                 }
 
 
-                {!displayName ? (<><Nav.Link as={NavLink} to="/register">SIGN UP</Nav.Link>
+                {!displayName ? (<>
 
-                    <Nav.Link as={NavLink} to="/login">LOG IN</Nav.Link></>) : (
+                    <Nav.Link as={NavLink} to="/login">LOGIN</Nav.Link></>) : (
                     <>
                         {isAdmin ?
                             <Nav.Link className='text-danger' ><h4>{displayName} <i className="fas fa-users-cog"></i></h4></Nav.Link>
@@ -67,7 +67,7 @@ const Header = () => {
                         }
 
 
-                        <button className='btn-danger p-2 text-light   rounded-pill btn-block' onClick={logOut}> log out</button></>
+                        <button className='btn-danger p-2 text-light   rounded-pill btn-block' onClick={logOut}> LOGOUT</button></>
                 )}
 
             </Nav>

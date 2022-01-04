@@ -7,7 +7,6 @@ import Banner from './Banner/Banner';
 import CustomerReviews from './CustomerReviews/CustomerReviews';
 import Decoration from './Decoration/Decoration';
 import FAQ from './FAQ/FAQ';
-import Location from './Location/Location';
 const Home = () => {
     return (
 <div>
@@ -16,7 +15,6 @@ const Home = () => {
 <Decoration></Decoration>
 <FAQ></FAQ>
 <CustomerReviews></CustomerReviews>
-<Location></Location>
 
         </div>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import faq from '../../../Assets/img/FAQ.jpg';
+import faq from '../../../Assets/img/myFAQ.png';
 const FAQ = () => {
     return (
         <div>
@@ -7,11 +7,11 @@ const FAQ = () => {
 
       <div className="container">
       <h2 className=" my-5 packages-header p-3 m-3 mx-auto text-center">
-      Frequently Asked Questions    </h2>
+      Confidence FAQ    </h2>
 
         <div className="container d-lg-flex">
           <div className="mb-3 col-md-6">
-            <img src={faq} width="100%" height="90%" alt="" />
+            <img src={faq} width="100%" height="100%" alt="" />
           </div>
 
           <div className="my-auto col-md-6 ms-4 ">

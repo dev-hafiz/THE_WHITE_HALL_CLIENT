@@ -31,15 +31,12 @@ const Decoration = () => {
             <div className="col-lg-6 col-md-6 col-12">
             <div className="row">
                 <div className="col-lg-6 col-md-6 col-6">
-                <div className="col-lg-6 col-md-6 col-12">
-                <img className="" width="100%" src={room3} alt="" />
-                </div>
-                <div className="col-lg-6 col-md-6 col-12 mt-3">
-                <img width="100%" src={room4} alt="" /> 
+                <div className="mb-3">
+                <img class="img-fluid" width="100%"  src={room3} alt="" />
                 </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-6">
-                <img  width="100%" src={room5} alt="" />
+                <img  width="100%"  src={room5} alt="" />
                 </div>
             </div>
             </div>

@@ -17,7 +17,7 @@ const CustomerReviews = () => {
         <div className="  text-white pb-5 pt-1 my-5">
             <div className="text-center pt-5 pb-3">
            
-                <h2 className="mx-auto text-center About-header " >Customer Reviews</h2>
+                <h2 className="mx-auto text-center packages-header " >Customer Reviews</h2>
 
             </div>
             <hr />

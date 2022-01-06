@@ -5,12 +5,12 @@ const Package = ({singlepPackage }) => {
     const { _id, name, price, Description, img ,item1,item2,item3} = singlepPackage;
     return (
         <div className="col mb-4 " id="packages">
-      <div className="card h-100 shadow-lg gray mb-5 bg-body rounded">
+      <div className="my-card  shadow-lg gray mb-5 bg-body rounded">
         <img
           src={img}
           className="card-img-top  rounded"
           alt="..."
-          height="450"
+          height="350"
         />
         <div className="card-body p-3">
           <h2 className="card-title Bold text-danger text-center mb-2">{name}</h2>

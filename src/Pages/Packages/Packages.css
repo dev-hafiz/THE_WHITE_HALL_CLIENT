@@ -1,8 +1,12 @@
 .packages-header{
-    border: 2px solid green;
+    
     width: 40%;
     padding: 10px 0;
-    border-radius: 40px;
+    border-radius: 6px;
     color: white;
-    background-color: rgb(48, 48, 48);
+    background: #171717;
+    margin-top: 90px  !important;
+    margin-bottom: 70px  !important;
+    
+    
 }

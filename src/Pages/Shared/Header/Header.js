@@ -26,7 +26,7 @@ const Header = () => {
 <div>
 <Navbar bg="light" expand="lg" className={(isSticky) ? "navbar  navbar-expand-lg navbar-dark bg-dark fixed-top" : "navbar  navbar-expand-lg navbar-light color text-dark"}>
     <Container>
-        <Nav.Link as={NavLink} to="/"><Navbar.Brand href="#home"> THE WHITE HALL </Navbar.Brand></Nav.Link>
+        <Nav.Link as={NavLink} to="/"><Navbar.Brand  className="fw-bold" href="#home"> THE WHITE HALL </Navbar.Brand></Nav.Link>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">

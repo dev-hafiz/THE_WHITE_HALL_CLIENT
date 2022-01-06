@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from "react-bootstrap";
 import {  Nav,  } from "react-bootstrap";
 import { HashLink } from "react-router-hash-link";
-import banner1 from '../../../Assets/img/Banner/Capture.PNG';
+import banner1 from '../../../Assets/img/Banner/Capture.jpg';
 import banner2 from '../../../Assets/img/Banner/banner2.jpg';
 import banner3 from '../../../Assets/img/Banner/banner3.jpg';
 const Banner = () => {
@@ -13,7 +13,7 @@ const Banner = () => {
             <img
               className="d-block w-100"
               src={banner1}
-              height="400"
+              height="500"
               alt="First slide"
             />
             <Carousel.Caption>
@@ -28,7 +28,7 @@ const Banner = () => {
             <img
               className="d-block w-100"
               src={banner2}
-              height="400"
+              height="500"
               alt="Second slide"
             />
   
@@ -42,7 +42,7 @@ const Banner = () => {
             <img
               className="d-block w-100"
               src={banner3}
-              height="600"
+              height="500"
               alt="Third slide"
             />
   
